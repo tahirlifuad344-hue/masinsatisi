@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: masinsatisi
+  datasource:
+    url: jdbc:mysql://localhost:3306/masinsatisi?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: false
+  flyway:
+    enabled: false
+    locations: classpath:db/migration
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 25MB
+
+server:
+  port: 8081
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:change-this-secret-at-least-32-chars}
+    expiration-ms: 604800000
+  upload:
+    dir: ${UPLOAD_DIR:uploads}
+

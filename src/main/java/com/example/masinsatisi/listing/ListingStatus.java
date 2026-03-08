@@ -1,0 +1,6 @@
+package com.example.masinsatisi.listing;
+
+public enum ListingStatus {
+    ACTIVE,
+    DELETED
+}
