@@ -43,5 +43,7 @@ frontend/frontend-dev.err
 ### Logs ###
 backend.log
 backend.err
+backend-run.log
+backend-run.err
 uploads/
 *.log
