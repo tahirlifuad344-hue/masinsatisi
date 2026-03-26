@@ -16,6 +16,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import java.math.BigDecimal;
+import java.sql.ConnectionBuilder;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
@@ -82,4 +83,8 @@ public class Listing {
 
     @OneToMany(mappedBy = "listing", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<ListingImage> images = new ArrayList<>();
+
+    public static ConnectionBuilder builder() {
+        return null;
+    }
 }

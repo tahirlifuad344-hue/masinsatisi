@@ -6,7 +6,7 @@ services:
     restart: unless-stopped
     environment:
       MYSQL_DATABASE: masinsatisi
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: 7695
     ports:
       - "3306:3306"
     volumes:

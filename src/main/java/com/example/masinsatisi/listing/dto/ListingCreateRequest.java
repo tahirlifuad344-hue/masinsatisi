@@ -40,4 +40,5 @@ public class ListingCreateRequest {
     @NotNull
     @DecimalMin("0.01")
     private BigDecimal price;
+
 }
